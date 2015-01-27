@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empid: MyString
+  empname: MyString
+  prooftype: MyString
+  senddate: 2014-04-11
+
+two:
+  empid: MyString
+  empname: MyString
+  prooftype: MyString
+  senddate: 2014-04-11

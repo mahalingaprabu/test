@@ -1,0 +1,23 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :proof, :url =>{:action => 'create'}, :html => { :multipart => true } do |i| -%>
+<div class='heading'>
+<br/><b>Upload Receipts<b>
+</div>
+<div id="proof">
+<center><table cellpadding="10" cellspacing="10">
+<%= i.hidden_field :empid, :value =>@empid %>
+<tr><td><b>Proof For   </b></td>
+<td><%= i.text_field :prooftype %></td></tr>
+<%= i.hidden_field :senddate, :value =>Date.today.strftime("%d-%b-%Y") %>
+<tr><td><b>Upload proof</b></td>
+<td><%= i.file_field :attach %></td></tr>
+<%= i.hidden_field :status, :value =>"sent" %>
+</table><br/>
+<input type="submit" value="Upload" id="button">
+<input type="reset" value="Cancel" id="button"></center>
+</div>
+<% end %>
+
+

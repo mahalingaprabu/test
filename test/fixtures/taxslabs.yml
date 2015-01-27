@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  financialyear: MyString
+  salaryrange: MyString
+  taxrate: 9.99
+  cess1: 9.99
+  cess2: 9.99
+  surcharge: 9.99
+
+two:
+  financialyear: MyString
+  salaryrange: MyString
+  taxrate: 9.99
+  cess1: 9.99
+  cess2: 9.99
+  surcharge: 9.99

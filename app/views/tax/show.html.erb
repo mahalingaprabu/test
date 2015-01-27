@@ -1,0 +1,42 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+
+<div class="heading">
+Tax Slab
+</div>
+<hr>
+
+<table id="search_employees" cellpadding="5">
+    <tbody>
+<tr><th>
+FinancialYear:: <%= @tax.financialyear %></th>
+</tr>
+	
+         <tr>
+	    
+            <th>salaryrange</th>
+<th>Tax Rate</th>
+<th>Cess 1</th>
+<th>Cess 2</th>
+<th>Surcharge</th>
+	
+             
+         </tr>
+     <% @taxs.each do |tax| %>
+        
+          
+ 		<td><%=tax.salaryrange %></td>
+<td><%=tax.taxrate %></td>
+<td><%=tax.cess1 %></td>
+<td><%=tax.cess2 %></td>
+<td><%=tax.surcharge %></td>
+           </tr>
+     <% end %>
+   </tbody>
+</table>
+
+	
+
+
+

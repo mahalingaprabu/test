@@ -1,0 +1,57 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :complaint, :url =>{:action => 'update', :id => @complaint.id} do |i| %>
+<div class='heading'>
+Complaints/Requests History
+</div>
+<div id="complaints"> 
+<div id="complaintcontents">
+ <% if @emp.roles == "Admin" && @emp.empid !=@complaint.empid %>
+<table cellpadding="3" cellspacing="10">
+<tr><td  style="width:20%"><label for="empname"><b>Message from </b></label></td>
+<td><span>: <%=@complaint.empname.capitalize%></span></td></tr>
+<tr><td><label for="empid"><b>Employee Id </b><label></td>								
+<td><span>: <%= @complaint.empid%></span></td></tr>
+<tr><td><label for="type"><b>Type </b></label></td>
+<td><span>: <%=@complaint.ctype%><span></td></tr>
+<tr><td><label for="date"><b>Send Date</b></label></td>
+<td><span>: <%=@complaint.cdate%></span></td></tr>
+<tr><td><label for="summary"><b>Summary</b></label></td>
+<td><span>: <%=@complaint.summary%></span></td></tr>
+<tr><td><label for="description"><b>Description</b></label></td>								
+ <td><div id="la">:  <%=@complaint.description%></div></tr></td>
+<tr><td><label for="status"><b>Status</b></label></td>
+ <td><span>:<%= i.select :status, options_for_select([["Select One",""], "Actioned", "Bending", "Reject"])  %></span></tr></td>
+<tr><td><label for="comments"><b>Comments</b></lable></td>
+<td><span>:<%= i.text_field :comments %></span>
+</table>
+
+<% else %>
+<table cellpadding="3" cellspacing="10">
+<tr><td  style="width:20%"><label for="empname"><b>Message from </b></label></td>
+<td><span>: <%=@complaint.empname.capitalize%></span></td></tr>
+<tr><td><label for="empid"><b>Employee Id </b><label></td>								
+<td><span>: <%= @complaint.empid%></span></td></tr>
+<tr><td><label for="type"><b>Type </b></label></td>
+<td><span>: <%=@complaint.ctype%><span></td></tr>
+<tr><td><label for="date"><b>Send Date</b></label></td>
+<td><span>: <%=@complaint.cdate%></span></td></tr>
+<tr><td><label for="summary"><b>Summary</b></label></td>
+<td><span>: <%=@complaint.summary%></span></td></tr>
+<tr><td><label for="description"><b>Description</b></label></td>								
+ <td><div id="la">:  <%=@complaint.description%></div></tr></td>
+<tr><td><label for="status"><b>Status</b></label></td>
+ <td><span>: <%=@complaint.status  %></span></tr></td>
+<tr><td><label for="comments"><b>Comments</b></lable></td>
+<td><span>: <%=@complaint.comments %></span>
+</table>
+<% end %>
+</div>
+<div id="complaintbutton">
+<input type="submit" value="submit" id="button">
+<input type="submit" value="back" id="button">
+</div>
+</div>
+<% end %>
+

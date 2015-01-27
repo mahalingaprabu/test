@@ -1,0 +1,58 @@
+<%= content_for :header do %>
+<marquee direction="left" scrollamount=1 align="center" behavior=alternate><font size="2"><b>Welcome to RapitThink...</b></font></marquee>
+<% end %>
+<% content_for(:page_title, "Login to OMS")%>
+<%= form_for :user do |f|-%>
+<div id='container'>
+<div id='slideshow'>
+<div id="banner_area">
+    <img  onload="get()" src="/assets/home_banner.jpg" />
+    <img  src="/assets/about-us-banner.png" />
+    <img  src="/assets/services.jpg" />
+    <img  src="/assets/career-banner.jpg" />
+    <img  src="/assets/contact-us-banner.jpg" />
+`</div>
+</div>
+<div id='loginwindow'>
+<table>
+<tr>
+<td>
+<p align="center"><font size="5" color="white"><b>Login</b></p></font></td></tr>
+<tr>
+<td>
+<table cellpadding="10" cellspacing="5">
+<tr><td><font color="white"><b>UserName</b></font></td>
+<td><%= f.text_field :login, :size => '20'%></td></tr>
+<tr><td><font color="white"><b>Password</b></font></td>
+<td><%= f.password_field :password, :size => '20'%></td></tr>
+</table>
+<table>
+<tr><td><%= check_box "tag", "enabled", {}, "1", "0" %><font color="white"><b>Remember Me</b></font></td>
+<td><input type="submit" value="Login" id="button"></td> </tr>
+</table><br/>
+<tr><td>
+<%= link_to 'Forgot my password', :action => 'forgot_password' %>     
+</td></tr>
+</td>
+<tr>
+</table>
+</iframe>
+</div>
+</div>
+<div class="slideshowcontents" id="slide">
+<%= yield :slideshowcontents %>
+</div>
+
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+

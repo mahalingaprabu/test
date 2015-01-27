@@ -1,0 +1,29 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<div class="heading">
+Deductions
+</div>
+<div id="deduction">
+
+<center><table cellpadding="10" cellspacing="10" >
+<tr><td><b>Deduction Mode</b></td>
+<td>: <%=@deduction.deduction_mode %></td></tr>
+<tr><td><b>Deduction Type</b></td>
+<td>: <%= @deduction.deduction_type %></td></tr>
+<tr><td><b>Financial Year</b></td>
+<td>: <%= @deduction.financial_year %></td></tr>
+<tr><td><b>Section</b></td>
+<td>: <%=@deduction.section %></td></tr>
+<tr><td><b>Section Limit</b></td>
+<td>: <%=@deduction.section_limit %></td></tr>
+<tr><td><b>Maximum Amount</b></td>
+<td>: <%= @deduction.max_amount %></td></tr>
+</table><center>
+
+</div>
+
+	
+
+
+

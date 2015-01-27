@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empid: MyString
+  empname: MyString
+  dob: 2014-03-11
+  age: 1
+  gender: MyString
+  doj: 2014-03-11
+  designation: MyString
+  managerid: MyString
+  address: MyText
+  mobno: 1
+  panno: MyString
+  email: MyString
+  deptid: MyString
+
+two:
+  empid: MyString
+  empname: MyString
+  dob: 2014-03-11
+  age: 1
+  gender: MyString
+  doj: 2014-03-11
+  designation: MyString
+  managerid: MyString
+  address: MyText
+  mobno: 1
+  panno: MyString
+  email: MyString
+  deptid: MyString

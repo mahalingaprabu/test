@@ -1,0 +1,67 @@
+<%= content_for :header do %>
+<div id='cssmenuitems'>
+<div id='cssmenu'>
+
+<ul>
+   <li class='has-sub'><a href="<%= employees_path %>"><b>Employee Master</b></a>
+      <ul>
+	<% if @emp.roles == "Admin" %> 
+         <li><a href="<%= new_employee_path %>"><b>Add New Employee</b></a></li>
+         <li><a href="<%= employees_aindex_path %>"><b>Alter Existing Employee</b></a></li>
+	<% end %>
+         <li class='last'><a href="<%= employees_path %>"><b>View Employee Details</b></a></li>
+	 <li><a href="<%= change_password_user_path %>"><b>Change Password</b></a></li>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><b>Salary Master</b></a>
+      <ul>
+	 <% if @emp.roles == "Admin" %> 
+         <li><a href="<%= salary_anew_path %>"><b>Salary Structure</b></a></li>
+         <li><a href="<%= new_salary_path %>"><b>Credit Salary</b></a></li>
+	<li class='last'><a href="<%= proof_index_path %>"><b>View Receipts</b></a></li>
+	<% end %>
+	<li><a href="<%= salary_aindex_path %>"><b>View Salary Structure</b></a></li>
+	 <li class='last'><a href="<%= salary_index_path %>"><b>View Salary</b></a></li>
+	 <li class='last'><a href="<%= new_proof_path %>"><b>Upload Receipts</b></a></li>
+         
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><b>Deduction Master</b></a>
+      <ul>
+         <li><a href="<%= deduction_index_path %>"><b>View Deductions</b></a></li>
+<% if @emp.roles == "Admin" %> 
+         <li class='last'><a href="<%= new_deduction_path %>"><b>Add New Deductions</b></a></li>
+<% end %>
+      </ul>
+   </li>
+   <li class='has-sub'><a href='#'><b>Department Master</b></a>
+      <ul>
+         <li><a href="<%= department_index_path %>"><b>View Department Details</b></a></li>
+<% if @emp.roles == "Admin" %> 
+         <li class='last'><a href="<%= new_department_path %>"><b>Add New Departments</b></a></li>
+<% end %>
+      </ul>
+   </li>
+<li class='has-sub'><a href='#'><b>Tax Planning</b></a>
+      <ul>
+         <li><a href="<%= tax_index_path %>"><b>View Tax Slab</b></a></li>
+<% if @emp.roles == "Admin" %> 
+         <li class='last'><a href="<%= new_tax_path %>"><b>New Tax Slab</b></a></li>
+<% end %>
+      </ul>
+   </li>
+<li class='has-sub'><a href='#'><b>Complaints & Requests</b></a>
+<ul>
+	<li><a href="<%=new_complaint_path %>"><b>new Complaints/Requests</b> </a></li>
+<% if @emp.roles == "Admin" && @emp.roles == "Manager" && @emp.roles == "Managing Director"  %> 
+         <li><a href="<%=complaint_index_path %>"><b>View Complaints/Requests</b> </a></li>
+<% end %>
+         <li class='last'><a href="<%=complaint_index_path %>"><b>complaints/Requests History</b></a></li>
+      </ul>
+   </li>
+ <li class='has-sub'><a href="<%= logout_user_path %>"><b>Logout</b></a>
+  
+</ul>
+</div>
+</div>
+<% end %>

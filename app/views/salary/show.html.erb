@@ -1,0 +1,130 @@
+<div id="showmain">
+<div id="banner">
+<div id="image">
+</div>
+<div id="address">
+rapidThink Software India Private Limited</br>
+New 8, Old 32, Second Main Road,</br>
+CIT Nagar East, Chennai - 600 035.
+</div>
+</div>
+<b class="color">Salary slip for month of <%= @salary.salarydate.strftime("%B %Y") %></b>
+<hr color="darkblue">
+<div id="employee">
+<div id="empl">
+<table cellpadding="5" cellspacing="4">
+<tr><td><b class="color">EmployeeID:</b></td>
+<td><%=@salary.empid%></td></tr>
+<tr><td><b class="color">Date of Joining:</b></td>
+<td><%=@salary.empname%></td></tr>
+<tr><td><b class="color">IT PAN:</b></td>
+<td><%=@pan%></td></tr>
+<tr><td><b class="color">Days in Month:</b></td>
+<td><%=@salary.daysinmonth%></td></tr>
+</table>
+</div>
+<div id="empr">
+<table cellpadding="5" cellspacing="4">
+<tr><td><b class="color">EmployeeName:</b></td>
+<td><%=@salary.empname%></td></tr>
+<tr><td><b class="color">Designation:</b></td>
+<td><%=@designation%></td></tr>
+<tr><td><b class="color">Department:</b></td>
+<td><%=@dept%></td></tr>
+<tr><td><b class="color">Days Payable:</b></td>
+<td><%=@salary.dayspaid%></td></tr>
+</table>
+</div>
+</div>
+<hr color="darkblue">
+<span class="tab">Salary Component</span>
+<span class="tab">For the month</span>
+<span class="tab">Arrears</spann>
+<span class="tab1">Total</span>
+<span class="tab">Year To Date</spann>
+<hr color="darkblue">
+<div id="empsal">
+<table cellpadding="5" cellspacing="4">
+<tr><td><b>Basic Salary</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.basicpay%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.basicpay%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearbasic%>" readonly></td></tr>
+<tr><td><b>Dearness Allowance</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.da%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.da%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearda%>" readonly></td></tr>
+<tr><td><b>House Rent Allowance</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.hra%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.hra%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearhr%>" readonly></td></tr>
+<tr><td><b>Conveyance Allowance</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.ca%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.ca%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearca%>" readonly></td></tr>
+<tr><td><b>Special Allowance</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.sa%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.sa%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearsa%>" readonly></td></tr>
+<tr><td><b>Medical Reimbursement </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.medical%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.medical%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearmedical%>" readonly></td></tr>
+<tr><td><b>Leave Travel Allowance </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.leavetransallowance%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.leavetransallowance%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearleavetransallowance%>" readonly></td></tr>
+<tr><td><b>Bonus / Incentive </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.bonus%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.bonus%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yearbonus%>" readonly></td></tr>
+
+<tr><td><b>Gross Earnings</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.gross_salary%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.gross_salary%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@yeargross_salary%>" readonly></td></tr>
+<tr><td><b>Salary Deduction</b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.salaryded%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.salaryded%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.salaryded%>" readonly></td></tr>
+<tr><td><b>Professional Tax</b></td>
+<td><input type="text" size="10" text-align="right" value="<%=@salary.professionaltax%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.professionaltax%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.professionaltax%>" readonly></td></tr>
+<tr><td><b>Income Tax (TDS) </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.incometax%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.incometax%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.incometax%>" readonly></td></tr>
+<tr><td><b>ESI Deduction </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.esi%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.esi%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.esi%>" readonly></td></tr>
+<tr><td><b>Gross Deductions </b></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.gross_ded%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="0" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.gross_ded%>" readonly></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.gross_ded%>" readonly></td></tr>
+<tr></tr>
+<tr></tr>
+<tr><td><b>Net Pay </b></td>
+<td></td>
+<td></td>
+<td></td>
+<td><input type="text" size="10" text-align="left" value="<%=@salary.netsalary%>" readonly></td></tr>
+</table>
+</div>
+</div>
+
+

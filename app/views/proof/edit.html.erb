@@ -1,0 +1,22 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :proof, :url =>{:action => 'update', :id => @proof.id} do |i| -%>
+<div class='heading'>
+<br/><b>Upload Receipts<b>
+</div>
+<div id="proof">
+<center><table cellpadding="10" cellspacing="10">
+
+<tr><td><b>Proof For   </b></td>
+<td><%= i.text_field :prooftype %></td></tr>
+<%= i.hidden_field :senddate, :value =>Date.today.strftime("%d-%b-%Y") %>
+<tr><td><b>Upload proof</b></td>
+<td><%= i.file_field :attach %></td></tr>
+</table><br/>
+<input type="submit" value="Upload" id="button">
+<input type="reset" value="Cancel" id="button"></center>
+</div>
+<% end %>
+
+

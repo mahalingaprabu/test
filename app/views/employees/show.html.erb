@@ -1,0 +1,61 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<div class='heading'>
+<br/><%= @employee.empname.capitalize%> Details
+</div>
+<div id="empshowleft">
+<table cellpadding="8" cellspacing="6">
+<tr><td><label for="empid"><b>Emp id</b></label></td>
+<td><span>: <%=@employee.empid%></span></td></tr>
+<tr><td><label for="empname"><b>Name</b><label></td>								
+<td><span>: <%= @employee.empname.capitalize%></span></td></tr>
+<tr><td><label for="dob"><b>Date of birth</b></label></td>
+<td><span>: <%=@employee.dob.strftime("%d-%b-%Y")%></span></td></tr>
+<tr><td><label for="age"><b>Age at joining</b></label></td>
+<td><span>: <%=@employee.age%></span></td></tr>
+<tr><td><label for="gender"><b>Gender</b></label></td>
+<td><span>: <%=@employee.gender.capitalize%></span></td></tr>
+<tr><td><label for="address"><b>Address</b></label></td>								
+  <td><div id="la">:  <%=@employee.address.capitalize%></div></tr></td>
+<tr><td><label for="mobno"><b>Mobile No</b></label></td>
+ <td><span>: <%=@employee.mobno%></span></tr></td>
+
+</table>
+
+</div>
+<div id="empshowright">
+
+<table cellpadding="8" cellspacing="6">
+
+<tr><td><label for="panno"><b>PAN</b></label></td>
+ <td><span>: <%=@employee.panno%></span></tr></td>
+<tr><td><label for="email"><b>Email</b></label></td>
+  <td><span>: <%=@employee.email%></span></tr></td>
+<tr><td><label for="emp_doj"><b>Date of joining</b></label></td>
+<td><span>: <%=@employee.doj.strftime("%d-%b-%Y")%></span></td></tr>
+<tr><td><label for="designation"><b>Designation</b></label></td>
+<td><span>: <%=@employee.designation.capitalize%></span></td></tr>
+
+<tr><td><label for="managerid"><b>Manager</b></label></td>
+<td><span>: <%=@employee.managerid%></span></td></tr>
+<tr><td><label for="departmentid"><b>Department ID</b></label></td>
+<td><span>: <%=@employee.depid%></span></td></tr>
+<tr><td><label for="role"><b>Role</b></label></td>
+<td><span>: <%=@employee.roles.capitalize %></span></td></tr>
+</table>
+
+</div>
+<div id="empphoto">
+<fieldset>
+<legend><b>Photo</b></legend>
+<%= image_tag @employee.pic.url %>
+</fieldset>
+</div>
+
+
+
+	
+
+
+

@@ -1,0 +1,845 @@
+#cssmain
+{
+	height:770px;
+	width:90%;
+	border:1px solid gray;
+	margin-left: auto;
+    	margin-right: auto;
+	
+}
+
+#errormsg
+{
+height:400px;
+width:400px;
+margin-left:0px;
+}
+
+b.color
+{
+color:darkblue;
+}
+
+#showmain
+{
+height:1200px;
+width:80%;
+
+margin-left:130px;
+font-style:italic;
+}
+#banner
+{
+	height:118px;
+	width:100%;
+	background-margin:auto;
+    	display: inline-block;
+    	text-align:center;
+	
+	
+}
+
+
+#image
+{
+	height:118px;
+	width:50%;
+	background-image:url("/assets/app_header.gif");
+	background-size:782px 130px;
+	background-repeat:no-repeat;
+	
+	float:left;
+}
+#address
+{
+	height:118px;
+	width:48%;
+	float:right;
+	text-align:right;
+	margin-top:10px;
+	margin-right:10px;
+	font-family:Liberation Serif;
+	font-size: 20px;
+	font-weight: bold;
+	line-height:35px;
+font-style:italic;
+	
+}
+#employee
+{
+height:130px;
+width:100%;
+
+}
+#empl
+{
+height:130px;
+width:35%;
+font-style:italic;
+float:left;
+text-align:left;
+}
+#empr
+{
+height:130px;
+width:40%;
+font-style:italic;
+float:right;
+text-align:left;
+margin-right:15%;
+}
+
+
+
+.heading
+{
+	height:30px;
+	width:100%;
+	color:darkblue;
+	text-align:center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	
+}
+.datetime
+{
+	height:40px;
+	width:100%;
+	color:grey;
+	text-align:right;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	border:1px solid gray;
+}
+#cssbanner
+{
+	height:118px;
+	width:100%;
+	background-margin:auto;
+    	display: inline-block;
+    	text-align:center;
+	background-image:url("/assets/app_header.gif");
+	background-size:910px 130px;
+	background-repeat:no-repeat;
+}
+
+span.tab
+{
+padding: 0 25px;
+font-weight: bold;
+color:darkblue;
+font-style:italic;
+}
+span.tab1
+{
+padding: 0 115px;
+font-weight: bold;
+color:darkblue;
+font-style:italic;
+}
+
+span:nth-child(1)
+{
+	padding-right: 0px;
+}
+
+#empsal
+{
+height:700px;
+width:100%;
+
+}
+
+#empsal td:nth-child(1)
+{
+    padding-right: 50px;
+}
+
+
+
+#cssheader
+{
+	height:36px;
+	width:100%;
+	background-color:#5d5d5d;
+	color:white;
+	border-bottom:1px solid white;
+ }
+
+#fontcolor
+{
+	font-weight: normal;
+	color: #FFFFFF;
+}
+#csscontents
+{
+	height:580px;
+	width:100%;
+	
+}
+#empcontents
+{
+	height:580px;
+	width:100%;
+	background-color:#F4FAFF;
+overflow:auto;
+	
+}
+#salarytype
+{
+	height:400px;
+	width:80%;
+	
+	margin-left:100px;
+	margin-top:100px;
+    	display: inline-block;
+border:1px solid black;
+	
+    
+}
+
+#deduction
+{
+	height:430px;
+	width:60%;
+	
+	margin-left:250px;
+	margin-top:100px;
+    	display: inline-block;
+border:1px solid black;
+	
+    
+}
+
+#complaints
+{
+margin-top:10px;
+margin-left:100px;
+height:520px;
+width:80%;
+border:3px solid gray;
+}
+#complaintcontents
+{
+height:470px;
+width:100%;
+
+}
+#complaintbutton
+{
+height:50px;
+width:400%;
+margin-left:200px;
+
+}
+#proof
+{
+height:300px;
+width:60%;
+border:3px solid gray;
+margin-left:250px;
+margin-top:130px;
+
+}
+
+
+#loginwindow
+{
+	
+	height:285px;
+	width:40.2%;
+	overflow: auto;
+        margin-left: 59.8%;
+        margin-right: 0;
+        margin-top: 0;
+        overflow:hidden;
+	background-color:#5d5d5d;
+}
+
+#loginwindow1
+{
+	
+	height:285px;
+	color:white;
+	width:40%;
+	overflow: auto;
+	margin-left:30%;
+       	background-color:#5d5d5d;
+}
+
+#banner_area img 
+{
+    display:none;
+    position: absolute;
+}
+#banner_area img:first-child 
+{
+    display:block;
+}
+#banner_area > img /* Use this to resize all image's container */
+{
+    width:700px;
+    height:285px;
+}
+#container
+{
+	height:285px;
+	width:100%;
+	
+}
+
+#investment
+{
+height:300px;
+width:60%;
+margin-left:200px;
+margin-top:100px;
+border:1px solid red;
+position:absolute;
+font-family:Liberation Serif;
+	font-size: 20px;
+	font-weight: bold;
+	font-style:italic;
+}
+
+#slideshow
+{
+	height:285px;
+	width:53%;
+	position: absolute;
+        overflow: hidden;
+        background-repeat:no-repeat;
+}
+.slideshowcontents
+{
+	height:295px;
+	width:100%;
+	background-color:#F0F0FF;
+}
+
+.t1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #009fde;
+}
+.t2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: #888888;
+	font-weight: bold;
+}
+.content {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #000000;
+	text-align: justify;
+}
+.t3 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #009fde;
+	font-weight: bold;
+}
+.bbg {
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+.hilighted {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	color: #009fde;
+}
+.BasicDetails
+{
+	
+	color:#5d5d5d;
+	padding:5px;
+	font-family:Times New Roman;
+	font-size:normal;
+	width:34%;
+	height:500px;
+	float:left;
+	
+}
+.Professionalinfo
+{
+	
+	color:#5d5d5d;
+	padding:5px;
+	font-family:Times New Roman;
+	font-size:normal;
+	width:33%;
+	height:490px;
+	float:left;
+	margin-top:190px;
+	margin-left:-377px;
+	
+}
+.buttondiv
+{
+height:50px;
+width:400px;
+margin-left:433px;
+margin-top:15px;
+}
+
+
+
+.contactdetails
+{
+	
+	color:#5d5d5d;
+	padding:5px;
+	font-family:Times New Roman;
+	font-size:normal;
+	width:36%;
+	height:310px;
+	float:right;
+	margin-top:0px;
+	margin-right:240px;
+
+	
+}
+
+.photo
+{
+	color:#5d5d5d;
+	padding:5px;
+	font-family:Times New Roman;
+	font-size:normal;
+	width:390px;
+	height:100px;
+	margin-left:400px;
+	
+	margin-top:330px;
+	
+}
+#empshowleft
+{
+height:470px;
+width:34%;
+margin-left:10px;
+margin-top:70px;
+float:left;
+}
+#empshowright
+{
+height:470px;
+width:45%;
+margin-top:70px;
+margin-left:400px;
+margin-bottom:10px;
+}
+#empphoto
+{
+height:270px;
+width:220px;
+font-weight: bold;
+
+margin-left:820px;
+margin-top:-480px;
+}
+
+tr.spaceUnder > td
+{
+  padding-bottom: 1em;
+}
+
+#fields
+{
+	height:542px;
+	width:100%;
+	border:1px solid red;
+	
+}
+
+#cssfooter
+{
+	height:35px;
+	width:100%;
+	background-color:#5d5d5d;
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 10px;
+	color:white;
+	float:left;
+	text-align: left;
+}
+#cssmenuitems
+{
+	height:36px;
+	width:95%;
+	float:left;
+	text-align: right;
+	display: inline;
+}
+#cssloginmenu
+{
+	height:36px;
+	width:19%;
+	float:right;
+}
+#cssmenu ul,
+#cssmenu li,
+#cssmenu span,
+#cssmenu a 
+{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-color:#5d5d5d;
+}
+#cssloginmenu a 
+{
+	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 14px;
+	color:white;
+}
+#cssmenu a 
+{
+  	color: #ffffff;
+	display: inline-block;
+  	font-family: 'Lucida Grande', 'Lucida Sans Unicode', Helvetica, Arial, Verdana, sans-serif;
+	font-size: 13.5px;
+  	min-width: 15px;
+  	text-align: center;
+  	text-decoration: none;
+  	text-shadow: 0 -1px 0 #333333;
+}
+#cssmenu ul 
+{
+  	list-style: none;
+}
+#cssloginmenu ul
+{
+	list-style: none;
+}
+
+
+#cssloginmenu ul a:hover
+{
+	font-weight: bold;
+	text-decoration: normal;
+}
+#cssmenu > ul > li 
+{
+  	float: left;
+}
+#cssmenu > ul > li.active a {
+  background: #646464 url(images/grad_dark.png) repeat-x left bottom;
+  background: -moz-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #646464), color-stop(100%, #4a4a4a));
+  background: -webkit-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  background: -o-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  background: -ms-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  background: linear-gradient(to bottom, #646464 0%, #4a4a4a 100%);
+  filter: progid:dximagetransform.microsoft.gradient(startColorstr='#646464', endColorstr='#4a4a4a', GradientType=0);
+  box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  -moz-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  -webkit-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  filter: none;
+}
+#cssmenu > ul > li.active a:hover 
+{
+  	background: -moz-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #646464), color-stop(100%, #4a4a4a));
+  	background: -webkit-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -o-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -ms-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: linear-gradient(to bottom, #646464 0%, #4a4a4a 100%);
+ 	box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	-moz-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	-webkit-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#646464', endColorstr='#4a4a4a', GradientType=0);
+	filter: none;
+}
+#cssmenu > ul > li a 
+{
+  	border-bottom: 1px solid #5d5d5d;
+  	border-top: 1px solid #5d5d5d;
+   	line-height: 32px;
+  	padding: 0 20px;
+  	filter: none;
+}
+
+#cssmenu > ul > li a:hover 
+{
+  	background: #8a8a8a url(images/grad_dark.png) repeat-x left bottom;
+  	background: -moz-linear-gradient(top, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #646464), color-stop(50%, #4a4a4a), color-stop(51%, 	#3b3b3b), color-stop(100%, #525252));
+  	background: -webkit-linear-gradient(top, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+  	background: -o-linear-gradient(top, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+  	background: -ms-linear-gradient(top, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+  	background: linear-gradient(to bottom, #646464 0%, #4a4a4a 50%, #3b3b3b 51%, #525252 100%);
+	box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	-moz-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	-webkit-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#8a8a8a', endColorstr='#787878', GradientType=0);
+  	filter: none;
+}
+#cssmenu > ul > li:first-child a 
+{
+	margin-left: auto;
+    	margin-right: auto;
+}
+#cssmenu > ul > li:last-child a 
+{
+  	border-radius: 0 0px 0px 0;
+}
+#cssmenu .has-sub:hover ul 
+{
+  	display: block;
+}
+#cssmenu .has-sub ul 
+{
+  	display: none;
+  	position: absolute;
+  	top: 36px;
+  	left: -1px;
+  	min-width: 100%;
+  	text-align: center;
+        *width: 100%;
+}
+#cssmenu .has-sub ul li 
+{
+  	text-align: center;
+}
+#cssmenu .has-sub ul li a 
+{
+  	border-top: 0 none;
+  	display: block;
+  	line-height: 125%;
+	width:110%;
+  	padding: 10px 5px;
+  	text-align: left;
+}
+#button
+{
+	height:40px;
+	width:127px;
+	color:white;
+	text-align:center;
+	margin-left:70px;
+	background-color:gray;
+        background: #646464 url(images/grad_dark.png) repeat-x left bottom;
+  	background: -moz-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #646464), color-stop(100%, #4a4a4a));
+ 	background: -webkit-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -o-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: -ms-linear-gradient(top, #646464 0%, #4a4a4a 100%);
+  	background: linear-gradient(to bottom, #646464 0%, #4a4a4a 100%);
+ 	filter: progid:dximagetransform.microsoft.gradient(startColorstr='#646464', endColorstr='#4a4a4a', GradientType=0);
+  	box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+ 	-moz-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	-webkit-box-shadow: inset 0 0 10px #222222, inset 0 10px 10px #222222;
+  	filter: none;
+}
+
+#search_employees{
+margin-top:60px;
+margin-left:190px;
+width:70%;
+border: 1px solid black;
+}
+#search_employees td{
+color:black;
+font-size:.9em;
+height:30px;
+text-align:center;
+}
+
+#search_employees th{
+background-color :#23408A;
+color:#ffffff;
+font-size:.94em;
+height:30px;
+text-align:center;
+padding-top:5px;
+padding-bottom:4px;
+}
+#fieldset
+{
+height:20%;
+width:100%;
+
+}
+#fieldsetcon
+{
+height:80px;
+width:35%;
+margin-left:300px;
+}
+
+#empty
+{
+height:70px;
+width:100%;
+
+}
+
+
+.search_input
+{
+float:left;
+clear:right;
+width:200px;
+height:20px;
+
+}
+
+
+#search_employees th{
+background-color:#23408A;
+color:#ffffff;
+font-size:.9em;
+height:25px;
+width:100%
+text-align:center;
+padding-top:5px;
+padding-bottom:4px;
+padding-left:10px;
+margin-left:10px;
+}
+
+#search_employees tr:nth-child(even)
+{
+color:#000000;
+
+background-color:#F0F4FD;
+}
+
+#empsalary
+{
+height:100px;
+width:80%;
+border:1px solid green;
+float:left;
+}
+#empsalaryr
+{
+height:100px;
+width:19%;
+float:right;
+border:1px solid green;
+}
+
+#empsalaryleft
+{
+height:100px;
+width:49%;
+position:top;
+float:left;
+border:1px solid red;
+}
+#empsalaryright
+{
+height:100px;
+width:50%;
+text-align:left;
+float:right;
+border:1px solid red;
+}
+
+
+#empsalarycon
+{
+height:410px;
+width:100%;
+
+}
+#empsalaryheadleft
+{
+height:30px;
+width:50%;
+color:darkblue;
+position:top;
+float:left;
+
+}
+#empsalaryheadright
+{
+height:30px;
+width:50%;
+color:darkblue;
+text-align:left;
+float:right;
+
+}
+#empsalaryconleft
+{
+height:380px;
+width:50%;
+position:top;
+float:left;
+
+
+}
+#empsalaryconright
+{
+height:380px;
+width:50%;
+text-align:top;
+float:right;
+
+}
+
+
+#creditsalary
+{
+height:250px;
+width:60%;
+border:3px solid gray;
+position:absolute;
+margin-left:180px;
+margin-top:100px;
+}
+
+#empsalarystructleft
+{
+margin-top:50px;
+height:350px;
+width:49%;
+float:left;
+
+}
+#empsalarystructright
+{
+margin-top:50px;
+height:350px;
+width:50%;
+text-align:left;
+float:right;
+
+}
+#empsalarystructbutton
+{
+height:50px;
+width:100%;
+
+margin-top:450px;
+}
+
+    .pagination {
+    .previous_page { background:#7777ff; color:white }
+    .previous_page.disabled { background: white; color: #777 }
+    .current { background: yellow }
+    .next_page { background: #7777ff; color: white }
+    .next_page.disabled { background: white; color: #777 }
+    }
+
+
+#proof1
+{
+height:300px;
+width:50%;
+border:3px solid gray;
+margin-left:250px;
+position: absolute;
+margin-top:50px;
+}
+
+
+
+

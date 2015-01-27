@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OMS</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id='cssmain'>
+<div id='cssbanner'>
+</div>
+<link rel='stylesheet' type='text/css' href='home.css' />
+<script src="myscript.js"></script>
+<div id='cssheader'>
+<%= yield :header %>
+</div>
+<div id='empcontents'>
+	<%= content_for?(:content) ? yield(:content) : yield %>
+</div>
+<div id='cssfooter'>
+<p>&copy; Copyright 2005-2013 rapidThink. All Rights Reserved</p>
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+
+<div id="empty">
+</div>
+<div id="fieldset">
+<fieldset id="fieldsetcon">
+<legend>Search</legend>
+<%= form_tag salary_index_path, :method => 'get' do %>
+<table>
+<tr><td><%= text_field_tag :search, params[:search], :class =>"search_input" %></td>
+<td><input type="submit" value="Search", id="button"></td></tr>
+</table>
+<% end %>
+</fieldset>
+</div>
+<table id="search_employees">
+    <tbody>
+         <tr>
+             <th>Employee id</th>
+             <th>Employee Name</th>
+             <th>Basicpay</th>
+	      <th>Home Rend Allowance</th>
+
+ <th>Conveyance</th>
+             <th>GrossSalary</th>
+             
+             
+         </tr>
+     <% @salary.each do |sal| %>
+         <tr id="emp_<%=sal.empid%>">
+           <td><%= link_to sal.empid, :action => "show", :id => sal.id %></td>
+           <td><%=sal.empname%></td>
+           <td><%=sal.basicpay%></td>
+           
+           <td><%=sal.hra%></td>
+           <td><%=sal.ca%></td>
+	   <td><%=sal.gross_salary%></td>
+           
+        </tr>
+     <% end %>
+   </tbody>
+</table>
+
+
+
+

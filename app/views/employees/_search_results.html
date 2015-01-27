@@ -1,0 +1,5 @@
+<ul>
+<% @employees.each do |employee| %>
+<li><%= link_to employee.empid, :action => 'show', :id => employee.id %></li>
+<% end %>
+</ul>

@@ -1,0 +1,53 @@
+/* line 5, ../../app/assets/stylesheets/authenticate.css.scss */
+#body {
+  background-position: 200px 100px;
+  background-image: url("/assets/sara.jpg");
+  background-repeat: no-repeat;
+  background-size: 10px 50px;
+}
+
+/* line 13, ../../app/assets/stylesheets/authenticate.css.scss */
+.loginbutton {
+  margin-top: 7px;
+  margin-left: 27%;
+  margin-bottom: -10px;
+  width: 100px;
+  display: inline;
+  height: 45px;
+  border: 0px solid #B9CBEC;
+  border-radius: 0px;
+  background-image: url("/assets/login.JPG");
+  background-size: 100px 50px;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  font-size: .9em;
+  color: transparent;
+  font-weight: bold;
+}
+
+/* line 30, ../../app/assets/stylesheets/authenticate.css.scss */
+#szlider {
+  width: 100%;
+  height: 15px;
+  border: 1px solid #000;
+  overflow: hidden;
+}
+
+/* line 35, ../../app/assets/stylesheets/authenticate.css.scss */
+#szliderbar {
+  width: 37%;
+  height: 15px;
+  border-right: 1px solid #000000;
+  background: #d65946;
+}
+
+/* line 40, ../../app/assets/stylesheets/authenticate.css.scss */
+#szazalek {
+  color: #000000;
+  font-size: 15px;
+  font-style: italic;
+  font-weight: bold;
+  left: 25px;
+  position: relative;
+  top: -16px;
+}

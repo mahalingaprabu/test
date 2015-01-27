@@ -1,0 +1,26 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :tax, :url =>{:action => 'update', :id => @tax.id} do |i| -%>
+<fieldset>
+<legend><font color='blue'>Tax Slab</font></legend>
+<table cellpadding="7" cellspacing="7" >
+<tr><td>FinancialYear</td>
+<td><%= i.text_field:financialyear, :size=>'10',:maxlength =>'100' %><font color="grey" size=2>   eg.1999 - 2000</font></td></tr>
+<tr><td>SalaryRange</td>
+<td><%= i.text_field:salaryrange, :size=>'10',:maxlength =>'100' %><font color="grey" size=2>     eg.1,00,000 - 2,00,000</font></td></tr>
+<tr><td>TaxRate</td>
+    <td><%=i.text_field:taxrate, :size=>'10',:maxlength =>'2' %> %</td></tr>
+<tr><td>Cess1</td>
+    <td><%=i.text_field:cess1, :size=>'10',:maxlength =>'2' %> %</td></tr>
+<tr><td>Cess2</td>
+    <td><%=i.text_field:cess2, :size=>'10',:maxlength =>'2' %> %</td></tr>
+<tr><td>Surcharge</td>
+    <td><%=i.text_field:surcharge, :size=>'10',:maxlength =>'2' %> %</td></tr>
+</table>
+<center><input type="submit" value="Update" id="button"><input type="submit" value="Cancel" id="button"></center>
+</fieldset>
+<% end %>
+
+
+

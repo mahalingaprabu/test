@@ -1,0 +1,50 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<div id="empty">
+</div>
+<div id="fieldset">
+<fieldset id="fieldsetcon">
+<legend>Search</legend>
+<%= form_tag complaint_index_path, :method => 'get' do %>
+<table>
+<tr><td><%= text_field_tag :search, params[:search], :class =>"search_input" %></td>
+<td><input type="submit" value="Search", id="button"></td></tr>
+</table>
+<% end %>
+</fieldset>
+</div>
+<table id="search_employees">
+
+    <tbody>
+         <tr>
+             <th>Emp id</th>
+             <th>Emp Name</th>
+             <th>Complaint/Request</th>
+             <th>Date</th>
+             <th>Assigned To</th>
+             <th>Status</th>
+         </tr>
+
+     <% @complaints.each do |com| %>
+         <tr id="emp_<%=com.empid%>">
+           <td><%= link_to com.empid, edit_complaint_path(com) %></td>
+           <td><%=com.empname%></td>
+           <td><%=com.ctype%></td>
+           <td><%=com.cdate%></td>
+           <td><%=com.assignto%></td>
+	<% if com.empid == @emp.empid %>
+	   <td><%=com.status%></td>
+	<% else %>
+		<% if com.status=="sent" %>
+			<td>To be action</td>
+		<% else %>
+			<td><%=com.status%></td>
+		<% end %>
+	<% end %>
+           </tr>
+     <% end %>
+   </tbody>
+</table>
+
+

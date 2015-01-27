@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empid: MyString
+  empname: MyString
+  month: 2014-04-02
+  year: 2014-04-02
+  basicpay: 9.99
+  hra: 9.99
+  da: 9.99
+  ca: 9.99
+  sa: 9.99
+  medical: 9.99
+  leavetransallowance: 9.99
+  bonus: 9.99
+  gross_salary: 9.99
+  salaryded: 9.99
+  professionaltax: 9.99
+  incometax: 9.99
+  gross_ded: 9.99
+  netsalary: 9.99
+
+two:
+  empid: MyString
+  empname: MyString
+  month: 2014-04-02
+  year: 2014-04-02
+  basicpay: 9.99
+  hra: 9.99
+  da: 9.99
+  ca: 9.99
+  sa: 9.99
+  medical: 9.99
+  leavetransallowance: 9.99
+  bonus: 9.99
+  gross_salary: 9.99
+  salaryded: 9.99
+  professionaltax: 9.99
+  incometax: 9.99
+  gross_ded: 9.99
+  netsalary: 9.99

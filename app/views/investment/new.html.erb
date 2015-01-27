@@ -1,0 +1,23 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :investment, :url =>{:action => 'create'} do |i| %>
+<div class='heading'>
+Investment and Sections
+</div>
+<div id="investment">
+<br/><table cellpadding="8" cellspacing="4">
+<tr><td><b>Investment ID   </b></td>
+<td><%= i.text_field :investid, :size=>'10',:maxlength =>'100' %></td></tr>
+<tr><td><b>Description   </b></td>
+<td><%= i.text_area :description, :size=>'80',:maxlength =>'100' %></td></tr>
+<tr><td><b>Section</b></td>
+<td><%= i.text_field :section, :size=>'10',:maxlength =>'100' %></td></tr>
+</table><br/>
+<center>
+<input type="submit" value="Submit" id="button">
+<input type="submit" value="Cancel" id="button"></center>
+</div>
+<% end %>
+
+

@@ -1,0 +1,95 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :employee, :url => employees_path, :html => { :multipart => true } do |i| %>
+
+
+<div class='heading'>
+Employee Details
+</div>
+<div class="BasicDetails">
+<fieldset>
+<legend>Basic Details</legend>
+<table cellpadding="8" cellspacing="2">
+<tr><td><b>EmployeeName</b></td>
+<td><%= i.text_field :empname, :size=>'20',:maxlength =>'100' %></div></td></tr>
+<tr><td><b>DOB</b></td>
+<td><%= i.date_select :dob, :default => Date.today, :order => [:day, :month, :year], :use_short_month => true, :start_year => 1900, :end_year => Date.today.year %></tr></td>
+<tr><td><b>Gender</b></td>
+<td><%= i.select :gender, ["male","female"] %></td></tr>
+</fieldset>
+</table>
+</div>
+<div class="Professionalinfo">
+<fieldset>
+<legend>Professional Info</legend>
+<table cellpadding="5" cellspacing="5" >
+
+
+
+
+<tr>
+<td>
+<tr><td><b>Employee_ID   </b></td>
+<td><%=i.text_field :empid, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>DOJ</b></td>
+<td><%= i.date_select :doj, :default => Date.today, :order => [:day, :month, :year], :use_short_month => true,:start_year => 1900, :end_year => Date.today.year %></tr></td>
+<tr><td><b>Designation</b></td>
+<td><%= i.text_field :designation, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Manager_ID</b></td>
+<td><%= i.text_field :managerid, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Department_ID</b></td>
+<td><%= i.collection_select("depid",@dep, :id, :depid, :prompt =>"select", :selected => "depid" )%></td></tr>
+
+<tr><td><b>Roles</b></td>
+<td><%= i.select :roles, options_for_select([["None","None"],  ["Admin" ,"Admin"], ["Manager","Manager"]], @employee.roles) %></td></tr>
+
+</table>
+</fieldset>
+</div>
+<div class="contactdetails">
+<fieldset>
+<legend>Contact Details</legend>
+<table cellpadding="5" cellspacing="7">
+<tr><td><b>Address</b></td>
+<td align="left"><%= i.text_area :address, :cols =>'30', :rows => '7',:maxlength =>'100' %></tr></td>
+<tr><td><b>MobileNo</b></td>
+
+<td><%= i.text_field :mobno, :size=>'20',:maxlength =>'10' %></td></tr>
+<tr><td><b>PanNo</b></td>
+<td><%= i.text_field :panno, :size=>'20',:maxlength =>'10' %></td></tr>
+<tr><td><b>Email_ID</b></td>
+<td><%= i.text_field :email, :size=>'20',:maxlength =>'100'%></td></tr>
+</table>
+</fieldset>
+</div>
+<div id="kani">
+<% if @employee.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@employee.errors.count, "error") %> </h2>
+
+      <ul>
+      <% @employee.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+</div>
+<div class="photo">
+<fieldset>
+<legend>Photo</legend>
+<table cellpadding="5" cellspacing="7">
+<tr><td><b> Photo </b></td>
+<td><%= i.file_field :pic %></td></tr>
+</table>
+</fieldset>
+</div>
+<div class="buttondiv">
+<input type="submit" value="Save" id="button">
+<input type="submit" value="Cancel" id="button" onclick=>
+</div>
+<% end %>
+
+

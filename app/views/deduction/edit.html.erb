@@ -1,0 +1,26 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :deduction, :url =>{:action => 'update', :id => @deduction.id} do |i| -%>
+<div class="heading">
+Edit Deductions
+</div>
+<div id="deduction">
+
+<table cellpadding="10" cellspacing="10" >
+<tr><td>Deduction Mode</td>
+<td><%= i.select :deduction_mode, options_for_select([ ["--Select--"], ["Monthly"],  ["quarterly"], ["Yearly"]], @deduction.deduction_mode) %></td></tr>
+<tr><td>Deduction Type</td>
+<td><%= i.text_field :deduction_type, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td>Financial Year</td>
+<td><%= i.text_field :financial_year, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td>Section</td>
+<td><%= i.text_field :section, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td>Section Limit</td>
+<td><%= i.text_field :section_limit, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td>Maximum Amount</td>
+<td><%= i.text_field :max_amount, :size=>'20',:maxlength =>'100' %></td></tr>
+</table></br>
+<center><input type="submit" value="Update" id="button"><input type="submit" value="Cancel" id="button"></center>
+</div>
+<% end %>

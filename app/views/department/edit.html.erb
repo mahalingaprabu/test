@@ -1,0 +1,24 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :department, :url =>{:action => 'update', :id => @department.id} do |i| -%>
+
+<fieldset>
+<legend><font color='blue'>Edit Department</font></legend>
+<table cellpadding="10" cellspacing="10" >
+<tr><td>Department_ID</td>
+<td><%= i.text_field :depid, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td>Department_Name</td>
+<td><%= i.text_field :depname, :size=>'20',:maxlength =>'100' %></td></tr>
+</table></br>
+<center><input type="submit" value="Update" id="button"><input type="submit" value="Cancel" id="button"></center>
+</fieldset>
+<% end %>
+</div>
+<div id='cssfooter'>
+<p>&copy; Copyright 2005-2013 rapidThink. All Rights Reserved</p>
+</div>
+
+
+
+

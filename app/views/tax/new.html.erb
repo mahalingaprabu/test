@@ -1,0 +1,32 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+
+<%= form_for :tax, :url =>{:action => 'create'} do |f| -%>
+
+<div id="salarytype">
+<center></br>
+<table cellpadding="5px">
+
+<tr><th>SalaryRange</th>
+<th>TaxRate %</th>
+<th>Cess1 </th>
+<th>Cess2 </th>
+<th>Surcharge %</th></tr>
+
+
+
+
+<tr colspan="5">
+<%= f.text_field:financialyear, :size=>'10',:maxlength =>'100' %><font color="grey"> e.g 2000 -2013</font></center><br/>
+<td><%= f.text_field:salaryrange, :size=>'12',:maxlength =>'100' %></td>
+    <td><%=f.text_field:taxrate, :size=>'10',:maxlength =>'2' %> </td>
+	<td><%=f.text_field:cess1, :size=>'10',:maxlength =>'2' %> </td>
+    <td><%=f.text_field:cess2, :size=>'10',:maxlength =>'2'%></td>
+    <td><%=f.text_field:surcharge, :size=>'10',:maxlength =>'2'%></td></tr>
+
+</table></center><br/><br/>
+<center><input type="submit" value="Submit" id="button"><input type="submit" value="Cancel" id="button"></center>
+</div>
+<% end %>
+

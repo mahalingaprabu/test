@@ -1,0 +1,111 @@
+/* line 1, ../../app/assets/stylesheets/style.css.scss */
+#header {
+  height: 90px;
+  overflow: hidden;
+  border: 1px solid purple;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 80px;
+}
+
+/* line 2, ../../app/assets/stylesheets/style.css.scss */
+#bannerimg {
+  border: 1px solid red;
+}
+
+/* line 3, ../../app/assets/stylesheets/style.css.scss */
+#main {
+  border: 1px solid blue;
+  width: 60%;
+  margin-left: 20%;
+  max-height: 550px;
+  height: auto;
+  font-size: .9em;
+  color: #224B96;
+  overflow: auto;
+}
+
+/* line 4, ../../app/assets/stylesheets/style.css.scss */
+#primary {
+  border: 1px solid pink;
+  height: 100%;
+  overflow: auto;
+  padding-bottom: 5%;
+  margin-bottom: 20px;
+}
+
+/* line 6, ../../app/assets/stylesheets/style.css.scss */
+.ui-widget-overlay {
+  background-color: #333;
+  filter: alpha(opacity=80);
+  opacity: 0.8;
+  zoom: 1;
+}
+
+/* line 13, ../../app/assets/stylesheets/style.css.scss */
+.popup {
+  background-color: #fff;
+  border: 3px solid #C4D7DC;
+  padding: 8px;
+  width: 425px;
+  font-size: .70em;
+  margin: 0 auto;
+}
+
+/* line 23, ../../app/assets/stylesheets/style.css.scss */
+#flash_notice {
+  border: 2px solid #900;
+  display: none;
+  font-weight: bold;
+}
+
+/* line 29, ../../app/assets/stylesheets/style.css.scss */
+.notice_dialog #flash_notice {
+  display: block;
+}
+
+/* line 30, ../../app/assets/stylesheets/style.css.scss */
+.notice_dialog .ui-dialog-titlebar {
+  display: none;
+}
+
+/* line 32, ../../app/assets/stylesheets/style.css.scss */
+#flash_notice ul.notice_messages {
+  width: auto;
+  text-align: justify;
+}
+
+/* line 38, ../../app/assets/stylesheets/style.css.scss */
+#flash_notice ul.notice_messages li {
+  margin: 5px 0;
+}
+
+/* line 42, ../../app/assets/stylesheets/style.css.scss */
+#flash_error {
+  border: 2px solid #900;
+  display: none;
+}
+
+/* line 47, ../../app/assets/stylesheets/style.css.scss */
+.error_dialog #flash_error {
+  display: block;
+}
+
+/* line 49, ../../app/assets/stylesheets/style.css.scss */
+#flash_error ul.error_messages {
+  width: 500px;
+  text-wrap: none;
+  text-align: justify;
+}
+
+/* line 55, ../../app/assets/stylesheets/style.css.scss */
+.error_dialog #flash_error h4 {
+  margin-top: 8px;
+}
+
+/* line 59, ../../app/assets/stylesheets/style.css.scss */
+.buttons {
+  margin-left: 1%;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}

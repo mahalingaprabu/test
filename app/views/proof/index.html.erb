@@ -1,0 +1,46 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<div id="empty">
+</div>
+<div id="fieldset">
+<fieldset id="fieldsetcon">
+<legend>Search</legend>
+<%= form_tag proof_index_path, :method => 'get' do %>
+<table>
+<tr><td><%= text_field_tag :search, params[:search], :class =>"search_input" %></td>
+<td><input type="submit" value="Search", id="button"></td></tr>
+</table>
+<% end %>
+</fieldset>
+</div>
+<table id="search_employees">
+    <tbody>
+         <tr>
+             <th>Emp id</th>
+             <th>Emp Name</th>
+             <th>Proof Type</th>
+             <th>Date</th>
+	     <th>Status</th>
+	     <th>Edit</th>
+
+             
+         </tr>
+     <% @proofs.each do |proof| %>
+         <tr id="emp_<%=proof.empid%>">
+           <td><%= link_to proof.empid, proof_path(proof) %></td>
+           <td><%=proof.empname%></td>
+           <td><%=proof.prooftype%></td>
+           <td><%=proof.senddate%></td>
+	   <td><%=proof.status%></td>
+<% if @emp.empid == proof.empid && proof.status != "Actioned" %>
+	   <td><%= link_to 'edit', :action =>'edit', :id => proof.id %></td>
+<% end %>
+
+
+         </tr>
+     <% end %>
+   </tbody>
+</table>
+
+

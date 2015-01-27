@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  inverseid: MyString
+  section: MyString
+  description: MyText
+
+two:
+  inverseid: MyString
+  section: MyString
+  description: MyText

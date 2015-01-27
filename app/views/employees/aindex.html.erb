@@ -1,0 +1,42 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<div id="empty">
+</div>
+<div id="fieldset">
+<fieldset id="fieldsetcon">
+<legend>Search</legend>
+<%= form_tag employees_path, :method => 'get' do %>
+<table>
+<tr><td><%= text_field_tag:search, params[:search], :class =>"search_input" %></td>
+<td><input type="submit" value="Search", id="button"></td></tr>
+</table>
+<% end %>
+</fieldset>
+</div>
+<div id="search_employees">
+<table cellpadding="5">
+    <tbody>
+         <tr>
+             <th>Emp id</th>
+             <th>Emp Name</th>
+             <th>DOB</th>
+             <th>Date of Joining</th>
+             <th>Designation</th>
+             <th>Managerid</th>
+         </tr>
+     <% @employees.each do |emp| %>
+         <tr id="emp_<%=emp.empid%>">
+           <td><%= link_to emp.empid, edit_employee_path(emp) %></td>
+           <td><%=emp.empname%></td>
+           <td><%=emp.dob.strftime("%d-%b-%Y")%></td>
+           <td><%=emp.doj.strftime("%d-%b-%Y")%></td>
+           <td><%=emp.designation%></td>
+           <td><%=emp.managerid %></td>
+        </tr>
+     <% end %>
+   </tbody>
+</table>
+</div>
+
+

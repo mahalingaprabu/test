@@ -1,0 +1,31 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :salary, :url =>{:action => 'create'} do |i| %>
+
+<div class="heading">
+Credit Salary
+</div>
+<hr>
+<div id="creditsalary">
+<center>
+<table cellpadding="8" cellspacing="4">
+<tr><td><b>Employee_ID   </b></td>
+<td><%=i.collection_select("empid", @employee, :empid, :empid, :prompt =>"select", :selected => "empid" )%></td></tr></br></br>
+<tr><td><b>Days in Month</b></td>
+
+<td><%= i.text_field :daysinmonth, :value =>Time.days_in_month(Time.now.month,Time.now.year), :readonly=>true, :size=>'20',:maxlength =>'100' %></td></tr>
+<%= i.hidden_field :salarydate, :value =>Date.today.strftime("%d-%b-%Y") %>
+<tr><td><b>Days Paid</b></td>
+<td><%= i.text_field :dayspaid, :size=>'20',:maxlength =>'100' %></td></tr>
+
+
+
+<tr><td><input type="submit" value="Submit" id="button"></td>
+<td><input type="submit" value="Cancel" id="button"></td></tr>
+</table></center>
+</div>
+
+<% end %>
+
+

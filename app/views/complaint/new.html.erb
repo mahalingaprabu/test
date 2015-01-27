@@ -1,0 +1,54 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :complaint, :url =>{:action => 'create'} do |i| -%>
+<div class='heading'>
+Complaints/Requests
+</div>
+<% if @complaint.errors.any? %>
+    <div id="error_explanation">
+      <h2><font size="4" color="#4B0082"><%= pluralize(@complaint.errors.count, "Error") %></font> </h2>
+
+      <ul>
+      <% @complaint.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+<div id="complaints">
+<div id="complaintcontents">
+<center><table cellpadding="5" cellspacing="7">
+<%= i.hidden_field :empid, :value =>@empid %>
+<%= i.hidden_field :empname, :value =>@empname %>
+
+<%= i.hidden_field :cdate, :value =>Date.today.strftime("%d-%b-%Y") %>
+<tr><td><b>Type</b></td>
+
+<td><%= i.select :ctype, options_for_select([["Select One",""], "Complaint", "Request"])%></td></tr>
+<tr><td><b>Send To</b></td>
+<td><%= i.select :assignto, options_for_select([["Select One",""], "MD", "Manager", "Admin"]) %></td></tr>
+
+
+<%= i.hidden_field :status, :value =>"sent" %>
+
+
+
+
+<tr><td><b>Summary</b></td>
+<td><%=i.text_field :summary, :size=>'50',:maxlength =>'100' %></td></tr>
+<tr><td><b>Description</b></td>
+<td align="left"><%= i.text_area :description, :cols =>'69', :rows => '15'%></tr></td>
+</table><br/>
+</div>
+<div id="complaintbutton">
+<input type="submit" value="Update" id="button">
+<input type="submit" value="back" id="button">
+</div>
+</div>
+
+<% end %>
+
+

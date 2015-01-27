@@ -1,0 +1,46 @@
+<%= content_for :header do %>
+<%= render :partial => "/employees/emp_hub"%>
+<% end %>
+<%= form_for :salarystruct, :url =>{:action => 'acreate'} do |i| -%>
+
+<div class="heading">
+Salary Structure
+</div>
+<hr>
+<div id="empsalarystructleft">
+<table cellpadding="8" cellspacing="6">
+<tr><td><b>Employee_ID   </b></td>
+<td><%=i.collection_select("empid", @employee, :empid, :empid, :prompt =>"select", :selected => "empid" )%></td></tr>
+<tr><td><b>Basic Salary</b></td>
+<td><%= i.text_field :basicpay, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Dearness Allowance</b></td>
+<td><%= i.text_field :da, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>House Rent Allowance</b></td>
+<td><%= i.text_field :hra, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Conveyance Allowance</b></td>
+<td><%= i.text_field :ca, :size=>'20',:maxlength =>'100' %></td></tr>
+</table>
+</div>
+<div id="empsalarystructright">
+<table cellpadding="8" cellspacing="6">
+<tr><td><b>Special Allowance</b></td>
+<td><%= i.text_field :sa, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Medical Reimbursement </b></td>
+<td><%= i.text_field :medical, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Leave Travel Allowance </b></td>
+<td><%= i.text_field :leavetransallowance, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Bonus / Incentive </b></td>
+<td><%= i.text_field :bonus, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>Salary Deduction</b></td>
+<td><%= i.text_field :salaryded, :size=>'20',:maxlength =>'100' %></td></tr>
+<tr><td><b>ESI </b></td>
+<td><%= i.text_field :esi, :size=>'20',:maxlength =>'100' %></td></tr>
+</table>
+</div>
+<div id="empsalarystructbutton">
+<center><input type="submit" value="Submit" id="button"><input type="submit" value="Cancel" id="button"></center>
+</div>
+
+<% end %>
+
+

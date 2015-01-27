@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  empid: 1
+  empname: MyString
+  type: 
+  cdate: 2014-04-10
+  summary: MyText
+  description: MyText
+  assignto: MyString
+  status: MyString
+
+two:
+  empid: 1
+  empname: MyString
+  type: 
+  cdate: 2014-04-10
+  summary: MyText
+  description: MyText
+  assignto: MyString
+  status: MyString
